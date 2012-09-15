@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteRule collage\.png collage.php [L]
+RewriteRule combine\.(js|css).(.+\.(?:css|js))$ combine.php?c=$2&t=$1 [L]
+RewriteRule (.*?)\.(.*?)\.ajax(.*) ajax.php?module=$1&action=$2 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ((?!index\.php|combine\.(js|css)).*?) index.php/$1 [QSA]
+
+RewriteRule (images|css|scripts)/(.+)$ $1/$2
+
+SetOutputFilter DEFLATE 
+AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+
+FileETag none
+
+php_value upload_max_filesize "100M"
+php_value post_max_size "100M"
+
+#XSendFile On
+#XSendFileAllowAbove On

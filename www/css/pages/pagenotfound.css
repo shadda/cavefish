@@ -1,0 +1,12 @@
+body#page_pagenotfound {
+	background: #fff;
+}
+#master_container .content {
+	text-align: center;
+}
+.txt_404 {
+	color: #50d1e8;
+}
+#page_pagenotfound #footer {
+	display: none;
+}

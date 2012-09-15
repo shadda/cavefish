@@ -1,0 +1,27 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.txt_lightblue { }
+.txt_green { color: #619607;}
+h2.header {
+	font-family: "Lucida Grande";
+	font-size: 18px;
+	color: #193366;
+	font-weight: normal;
+}
+h3.subheader {
+	font-family: "Lucida Grande";
+	font-size: 16px;
+	font-weight: normal;
+	padding: 2px;
+	margin-top: 4px;
+}
+body {
+	background: #eee;
+	font-family: Helvetica, "Lucida Grande";
+}
+
+h1 {
+	font-size: 18px;
+}

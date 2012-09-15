@@ -1,0 +1,66 @@
+body#page_defaultpage #master_container {
+	width: 800px;
+	margin: 100px auto;
+	border: dotted 2px #AAA;
+	padding: 20px;
+}
+
+
+body#page_defaultpage #master_container .content {
+	border: dotted 2px #CCC;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+
+#twitter-feed-container {
+	margin: 20px;
+}
+#twitter-feed-container form {
+	margin-top: 15px;
+	margin-bottom: 20px;
+	background: #336699;
+	color: #eee;
+	padding: 10px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#twitter-feed-container label {
+	font-family: 'Helvetica';
+}
+#twitter-feed-container input.txt {
+	margin-left: 10px;
+	margin-right: 5px;
+	padding: 4px;
+	border: solid 1px #4081c2;
+}
+#twitter-feed div {
+	padding: 10px;
+	margin-bottom: 10px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+#twitter-feed div.a {
+	background: #ddd;
+}
+#twitter-feed span{
+	font-weight: bold;
+	font-family: "Helvetica";
+}
+#twitter-feed p {
+	padding-top: 5px;
+	font-family: "Lucida Grande";
+	font-size: 13px;
+	color: #172a30;
+}
+#twitter-feed a.thumb {
+	width: 48px;
+	height: 48px;
+	float: left;
+	margin-right: 10px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
