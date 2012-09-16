@@ -13,6 +13,8 @@
 
 		protected function __construct(array $params = array())
 		{	
+			parent::__construct($params);
+
 			$this->HoneyPot = array(
 				'status' => Controller::STATUS_OK,
 				'errors' => array(),

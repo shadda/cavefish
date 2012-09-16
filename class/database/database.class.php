@@ -7,11 +7,11 @@
 
 	abstract class Database extends PDO
 	{
-		protected function __construct($dsn, $user, $password)
+		public function __construct($dsn, $user, $password)
 		{
 			parent::__construct($dsn, $user, $password);
-			$this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$this->setAttrbute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_INTO, '\Database\Row');
+			parent::setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			parent::setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 		}
 	}
 
@@ -43,7 +43,7 @@
 			return $this->_data;
 		}
 
-		public fucntion __toJSON()
+		public function __toJSON()
 		{
 			return json_encode($this->_data);
 		}

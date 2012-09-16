@@ -7,8 +7,8 @@
 				'PostgreSQL' => array(
 					'host' => 'localhost',
 					'port' => '5432',
-					'database' => '',
-					'username' => 'postgres',
+					'database' => 'cavefish',
+					'username' => 'cavefish',
 					'password' => '',
 				),
 				'Memcache' => array(
