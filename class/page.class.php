@@ -29,9 +29,8 @@
 			parent::__construct($params);
 
 			$this->doc = new XD;
-			$this->className = strtolower(get_class($this));
-			$this->className = substr($this->className, strrpos($this->className, '\\') + 1);
-
+			$this->className = strtolower(\Tools::GetClassName($this));
+			
 			$this->index = $this->doc->appendChild( new XE('index') );
 			$this->headers = $this->index->AC( new XE('headers') );
 			$this->session = $this->index->AC( new XE('session') );
@@ -142,7 +141,7 @@
 			$this->addHeader('base', \Tools::GetBaseURL());
 			$this->addHeader('class_name', $this->className);
 			$this->addHeader('session_id', $this->session_id);
-			$this->addHeader('self', \Tools::GetBaseURL() . get_class($this));
+			$this->addHeader('self', \Tools::GetBaseURL() . \Tools::GetClassName($this));
 			$this->addHeader('uri', X::T($_SERVER['REQUEST_URI']));
 			$this->addHeader('token', $_SESSION['token']);
 

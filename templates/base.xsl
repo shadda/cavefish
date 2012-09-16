@@ -24,8 +24,11 @@
 			</head>
 			<body id="page_{/index/headers/class_name}">
 				<div id="master_container">
-					<h1>This is your main template, from which (usually) all other templates are wrapped in.</h1>
-					<xsl:apply-templates />
+					<a href="{/index/headers/self}?xml">See the XML</a>
+					<div id="master_content">
+						<h1>This is your main template, from which (usually) all other templates are wrapped in.</h1>
+						<xsl:apply-templates />
+					</div>
 				</div>
 				<script language="javascript" type="text/javascript" src="{/index/headers/base}combine.js/{/index/scripts}"></script>
 			</body>

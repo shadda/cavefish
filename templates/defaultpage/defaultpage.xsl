@@ -35,9 +35,21 @@
 				<input type="submit" class="submit" name="twitter_submit" value="Get Feed" />
 			</form>
 			<div id="twitter-feed">
-
+				<xsl:apply-templates />
 			</div>
 		</div>
 	</xsl:template>
 
+	<xsl:template match="twitter-feed/tweet">
+		<div class="tweet {@offset}">
+			<a class="thumb" style="background-image: url({@profile_image_url});" />
+			<span class="username">
+				<xsl:value-of select="@username" />
+			</span>
+			<p class="message">
+				<xsl:value-of select="@content" />
+			</p>
+		</div>
+	</xsl:template>
+	
 </xsl:stylesheet>

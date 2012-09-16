@@ -1,6 +1,12 @@
 body#page_defaultpage #master_container {
 	width: 800px;
 	margin: 100px auto;
+}
+body#page_defaultpage #master_container a {
+	margin-bottom: 4px;
+	display: block;
+}
+body#page_defaultpage #master_container #master_content {
 	border: dotted 2px #AAA;
 	padding: 20px;
 }
