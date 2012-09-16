@@ -127,7 +127,7 @@
 			if(file_exists($path))
 				return $path;
 
-			return "templates/$class/$class.xsl";
+			return strtolower("templates/$class/$class.xsl");
 		}
 
 		protected function FlipBack()
@@ -184,7 +184,7 @@
 
 			$class = \Tools::GetClassName($this);
 			$template = $this->getTemplate($class, $this->method);
-			
+
 			$this->Response = X::Translate($this->doc, $template);
 
 			return parent::Render();

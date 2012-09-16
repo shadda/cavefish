@@ -39,11 +39,11 @@
 	
 	spl_autoload_register(function($className) 
 	{	
-		$_class_name = strtolower($className);
 		$_path = str_replace('__', '/', $className);
 		$_path = str_replace('\\', '/', $className);
 		$_path .= '.class.php';
-		
+		$_path = strtolower($_path);
+
 		if(stream_resolve_include_path($_path))
 		{
 			require $_path;
